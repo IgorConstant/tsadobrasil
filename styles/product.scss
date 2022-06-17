@@ -1,0 +1,158 @@
+#mainBlock {
+    .productsList {
+        margin-top: 50px;
+
+        h4 {
+            text-transform: uppercase;
+            color: #223d73;
+            font-weight: 700;
+        }
+
+        .uk-card-default {
+            padding: 30px;
+            border: 1px solid #cacaca;
+
+            .codProduct {
+                color: #ffcb05;
+                font-weight: 700;
+                font-size: 25px;
+            }
+
+            .nameProduct {
+                color: #223d73;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+
+            .model {
+                font-weight: 700;
+                color: #223d73;
+            }
+
+            .uk-button-default {
+                background: #ffcb05;
+                color: #223d73;
+                font-weight: 700;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px #cca404;
+
+                &:active {
+                    box-shadow: 0 5px #cca404;
+                    transform: translateY(4px);
+                }
+            }
+        }
+
+        hr {
+            margin-top: 65px;
+            border-top: 2px solid #223d73;
+        }
+    }
+
+    .contentProduct {
+        .infosProduct {
+            .productCode {
+                font-size: 14px;
+
+                span {
+                    background: #ffcb05;
+                    color: #223d73;
+                    padding: 5px;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+            }
+
+            .nameAutomaker {
+                color: #223d73;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+
+            .compatible {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 700;
+
+                mark {
+                    background: #e7e7e7;
+                    padding: 5px;
+                    color: #223d73;
+                }
+            }
+
+            .originalCode,
+            .nameAutomaker,
+            .compatible {
+                margin: 5px 0 20px 0;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            mark {
+                background: #e7e7e7;
+                padding: 5px;
+                color: #223d73;
+                font-weight: 700;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0px;
+                margin: 5px 0 20px 0;
+
+                > li {
+                    display: inline-block;
+                    font-size: 14px;
+                    margin-right: 10px;
+                    font-weight: 700;
+                    color: #223d73;
+                }
+            }
+        }
+
+        .productSlider {
+            #thumbImage {
+                margin: 15px 0;
+
+                .item {
+                    border: 1px solid #a3aab8;
+                    margin: 0 5px;
+
+                    > img {
+                        padding: 10px;
+                    }
+                }
+            }
+
+            #bigImage {
+                .item {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    > img {
+                        padding: 15px 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .applicationTable {
+        background: #ffcb05;
+        padding: 40px;
+        margin: 60px 0;
+
+        p {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #223d73;
+        }
+    }
+}

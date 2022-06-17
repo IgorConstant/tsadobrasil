@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// 1. Your custom variables and variable overwrites.
+$yellow-color: #fcbd00;
+$blue-color: #00509a;
+$gray-color: #7c7c80;
+$orange-color: #d27900;
+$lightblue-color: #80b8b8;
+$white-color: #fff;
+
+// 2. Import default variables and available mixins.
+@import "node_modules/uikit/src/scss/variables-theme.scss";
+@import "node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() {
+    color: #000;
+}
+
+// 4. Import UIkit and Addons.
+@import "node_modules/uikit/src/scss/uikit-theme.scss";
+
+
+// 5. Your custom theme.
+@import "base";
+@import "header";
+@import "home";
+@import "about";
+@import "product";
+@import "technical";
+@import "downloads";
+@import "contact";
+@import "footer";
+
+// 6. Owl Carousel
+@import "owl/owl.carousel.scss";
+@import "owl/owl.theme.default.scss";
+@import "owl/owl.theme.green.scss";

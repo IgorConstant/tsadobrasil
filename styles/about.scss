@@ -1,0 +1,78 @@
+#mainBlock {
+    padding: 0 0 40px 0;
+
+    .indicator {
+        background: #fff;
+        padding: 20px;
+        margin-top: -40px;
+        width: 16%;
+
+        p {
+            color: #223d73;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .blockVideo {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .contentText {
+        margin: 40px 0;
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+#politicaQualidade {
+    background: #f4f4f4;
+    padding-bottom: 40px;
+
+    .indicator {
+        background: #f4f4f4;
+        padding: 20px;
+        margin-top: -40px;
+        width: 16%;
+
+        p {
+            color: #223d73;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .contentSection {
+        margin: 40px 0;
+    }
+}
+
+#lab {
+    .indicator {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: -40px;
+        width: 16%;
+
+        p {
+            color: #223d73;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .contentSection {
+        margin: 40px 0;
+
+        .uk-card {
+            background: #f4f4f4;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+footer {
+    background: #003b87;
+    padding: 60px 0;
+
+
+    .logoFooter {
+        ul {
+            list-style: none;
+            display: flex;
+            padding: 0 0 0 5px;
+            margin: 50px 0 0 0;
+
+            >li {
+                display: inline-block;
+                margin-right: 20px;
+
+                i {
+                    color: #ffcb05;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .titleFooter {
+
+        p {
+            color: #ffcb05;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .telTSA {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .mailBlock {
+            margin: 15px 0;
+
+            span {
+                color: #fff;
+                font-size: 14px;
+            }
+
+            .mailTSA {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .supportBlock {
+            span {
+                color: #fff;
+                font-size: 14px;
+            }
+
+            p {
+                margin: 12px 0;
+            }
+
+            .wppTSA {
+                color: #fff;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .skype {
+                text-transform: lowercase;
+                color: #fff;
+                font-weight: 400;
+            }
+        }
+
+        .newsTSA {
+            .uk-form-label {
+                color: #fff;
+                font-size: 12px;
+            }
+
+            .uk-input {
+                margin: 5px 0;
+            }
+
+            .checkLabel {
+                color: #fff;
+                font-size: 12px;
+            }
+
+            .uk-button-default {
+                background: #ffcb05;
+                margin: 10px 0;
+                font-weight: 700;
+                color: #003b87;
+                border: none;
+
+                @media(min-width: 1200px) {
+                    float: right;
+                }
+            }
+        }
+    }
+}

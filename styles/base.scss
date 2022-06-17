@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.copyright {
+    p {
+        font-size: 12px;
+        color: #fff;
+    }
+}
+
+#breadcrumbs {
+    background: url(../../assets/images/bg-breadcrumb.jpg) no-repeat;
+    padding: 80px 0;
+
+    .contentBreadcrumb {
+        p {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #fab600;
+            font-size: 20px;
+        }
+    }
+}
+
+#map {
+    position: relative;
+    z-index: 1;
+    height: 400px;
+
+    .gm-style-iw-d {
+
+        h5,
+        p {
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #000;
+        }
+    }
+}
+
+.searchForm {
+    background: #ffcb05;
+    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    position: relative;
+
+    p {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #223d73;
+    }
+
+    form {
+        ::-webkit-input-placeholder {
+            color: #223d73;
+            font-size: 10px;
+        }
+
+        input:-moz-placeholder {
+            color: #223d73;
+            font-size: 10px;
+        }
+
+        textarea:-moz-placeholder {
+            color: #223d73;
+            font-size: 10px;
+        }
+
+        .uk-button-default {
+            background: #223d73;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            padding: 1px 16px;
+            margin-left: -5px;
+        }
+
+        .uk-input {
+            border: 1px solid #223d73;
+        }
+
+        .uk-select {
+            border: 1px solid #223d73;
+            color: #223d73;
+            font-size: 12px;
+        }
+    }
+}
+
+
+.indicatorProduct {
+    background: #fff;
+    padding: 20px;
+    margin-top: -40px;
+    width: 25%;
+
+    p {
+        color: #223d73;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}

@@ -1,0 +1,64 @@
+#formBlock {
+    margin: 0 0 40px 0;
+
+    .cardContact {
+        background: #ffcb05;
+
+        .uk-form-label {
+            color: #223d73;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .uk-radio {
+            border: 1px solid #223d73;
+        }
+
+        label {
+            color: #223d73;
+        }
+
+        .blockTwo,
+        .blockThree {
+            margin-top: 40px;
+        }
+
+        .uk-button-default {
+            margin-top: 10px;
+            background-color: #223d73;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            outline: none;
+            box-shadow: 0 5px #21304f;
+
+            &:active {
+                box-shadow: 0 5px #21304f;
+                transform: translateY(4px);
+            }
+
+        }
+    }
+
+
+    .content {
+        h4 {
+            color: #ffcb05;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        p {
+            a {
+                color: #6d6d6d;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .mail {
+                font-size: 15px;
+            }
+        }
+    }
+}

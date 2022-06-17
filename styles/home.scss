@@ -1,0 +1,202 @@
+/* HOME TOPO */
+
+#sliderHeader {
+    background-color: #d6d6d6;
+
+    .uk-card-default {
+        height: 100%;
+        background: #f4f4f4;
+        padding: 30px;
+        box-shadow: none;
+
+        .content {
+            h3 {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #223d73;
+            }
+
+            hr {
+                border-top: 1px solid #223d73;
+            }
+
+            .uk-slider {
+                margin: 40px 0;
+
+                li {
+                    p {
+                        font-size: 17px;
+                        color: #223d73;
+                        margin: 30px 0;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .uk-dotnav>.uk-active>* {
+        background-color: #8b98b3;
+        width: 20px;
+        height: 20px;
+        margin-top: -6px;
+    }
+
+    .uk-dotnav>*>* {
+        background: #223d73;
+    }
+}
+
+
+/* INTRO CONTENT */
+
+#introContent {
+    background: url(../../assets/images/bg-introcontent.jpg) no-repeat center center;
+    background-size: cover;
+    padding-bottom: 80px;
+
+
+    .contentTruck {
+        margin: 50px 0;
+        background: url(../../assets/images/bg-linha-pesada.png) no-repeat center center;
+        padding: 80px 0;
+
+
+
+        .textContent {
+
+            @media(min-width: 1200px) {
+                margin-left: 20%;
+            }
+
+            @media(max-width: 999px) {
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 40px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+            .subtitle {
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+            .buttonBlock {
+
+                @media(min-width: 1200px) {
+                    position: absolute;
+                    right: 25%;
+                    bottom: -35%;
+                }
+
+                .uk-button-default {
+                    background: #ffcb05;
+                    color: #223d73;
+                    font-weight: 700;
+                    border: none;
+
+                    transition: all 0.3s ease 0s;
+                    margin-top: 10px;
+
+                    &:hover {
+                        box-shadow: 0px 15px 20px rgba(53, 19, 18, 0.4);
+                        transform: translateY(-7px);
+                    }
+                }
+            }
+        }
+    }
+
+    .productSlider {
+        .titleSection {
+            h3 {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #ffcb05;
+            }
+        }
+
+        .blockSlider {
+            margin-top: 25px;
+
+            .item {
+                figure {
+
+                    &:hover {
+                        background: rgba(34, 61, 115, 0.45);
+                        border: 3px solid #ffcb05;
+                    }
+
+
+                    >img {
+                        &:hover {}
+                    }
+
+                    figcaption {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: white;
+                        position: absolute;
+                        font-size: 16px;
+                        top: 50%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .aboutTSA {
+        margin: 50px 0;
+
+        .photoTSA {
+            background: url(../../assets/images/galpao-tsa.png);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .uk-card-default {
+            background: #003476;
+
+            h3 {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            p {
+                font-size: 14px;
+                color: #fff;
+            }
+
+            .uk-button-default {
+                background: #ffcb05;
+                color: #223d73;
+                font-weight: 700;
+                border: none;
+
+                transition: all 0.3s ease 0s;
+                margin-top: 10px;
+
+                &:hover {
+                    box-shadow: 0px 15px 20px rgba(53, 19, 18, 0.4);
+                    transform: translateY(-7px);
+                }
+            }
+        }
+    }
+}

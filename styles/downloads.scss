@@ -1,0 +1,75 @@
+#mainBlock {
+    .contentBlock {
+
+        .requestForm {
+            form {
+
+                ::-webkit-input-placeholder {
+                    color: #223d73;
+                    font-size: 14px;
+                }
+
+                input:-moz-placeholder {
+                    color: #223d73;
+                    font-size: 14px;
+                }
+
+                textarea:-moz-placeholder {
+                    color: #223d73;
+                    font-size: 14px;
+                }
+
+
+                .uk-input {
+                    border: 2px solid #223d73;
+                }
+
+
+                .uk-button-default {
+                    background: #ffcb05;
+                    color: #223d73;
+                    font-weight: 700;
+                    border: none;
+                    outline: none;
+                    box-shadow: 0 5px #cca404;
+
+                    &:active {
+                        box-shadow: 0 5px #cca404;
+                        transform: translateY(4px);
+                    }
+                }
+            }
+        }
+
+
+        .downloadsCards {
+            margin: 60px 0 0 0;
+
+            .animateCard {
+                text-decoration: none;
+
+                .uk-card-default {
+                    background: #ffcb05;
+                    transition: all 0.3s ease 0s;
+                    margin-top: 10px;
+
+                    .fa-arrow-to-bottom {
+                        color: #223d73;
+                        font-size: 50px;
+                    }
+
+                    p {
+                        color: #223d73;
+                        font-weight: 700;
+                    }
+
+                    &:hover {
+                        box-shadow: 0px 15px 20px rgba(53, 19, 18, 0.4);
+                        transform: translateY(-7px);
+                    }
+                }
+
+            }
+        }
+    }
+}
