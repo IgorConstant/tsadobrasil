@@ -7,6 +7,10 @@
         margin-top: -40px;
         width: 16%;
 
+        @media(max-width: 999px) {
+            width: 45%;
+        }
+
         p {
             color: #223d73;
             font-weight: 700;
@@ -40,6 +44,10 @@
         margin-top: -40px;
         width: 16%;
 
+        @media(max-width: 999px) {
+            width: 50%;
+        }
+
         p {
             color: #223d73;
             font-weight: 700;
@@ -59,6 +67,10 @@
         padding: 20px;
         margin-top: -40px;
         width: 16%;
+
+        @media(max-width: 999px) {
+            width: 40%;
+        }
 
         p {
             color: #223d73;

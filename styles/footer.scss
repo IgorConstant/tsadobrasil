@@ -101,7 +101,15 @@ footer {
                 @media(min-width: 1200px) {
                     float: right;
                 }
+
+                @media(max-width: 768px) {
+                    margin-left: 10px;
+                }
             }
         }
+    }
+
+    .stamps {
+        margin: 50px 0 0 0;
     }
 }

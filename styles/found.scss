@@ -1,0 +1,21 @@
+#mainBlock {
+    .contentBlock {
+
+        .infoCustomer {
+            .uk-card-default {
+                height: 100%;
+
+                h5 {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: #003b87;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+            }
+        }
+    }
+}

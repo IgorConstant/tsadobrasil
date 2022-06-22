@@ -26,4 +26,43 @@ header {
     .uk-sticky {
         background: #003b87;
     }
+
+
+    .uk-navbar-dropdown {
+        background: #003b87;
+    }
+
+    .uk-navbar-dropdown-nav>li>a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .uk-navbar-dropdown-nav>li>a:hover {
+        color: #fab600;
+    }
+
+    .uk-navbar-toggle:hover,
+    .uk-navbar-toggle[aria-expanded="true"] {
+        color: #fff;
+    }
+
+    .uk-navbar-toggle {
+        color: #fff;
+    }
+}
+
+.uk-offcanvas-bar {
+    background: #003b87;
+}
+
+.uk-nav-primary>li>a {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.idiomas {
+    display: inline-block;
+    margin-right: 15px;
 }

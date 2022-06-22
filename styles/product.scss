@@ -106,7 +106,7 @@
                 padding: 0px;
                 margin: 5px 0 20px 0;
 
-                > li {
+                >li {
                     display: inline-block;
                     font-size: 14px;
                     margin-right: 10px;
@@ -124,7 +124,7 @@
                     border: 1px solid #a3aab8;
                     margin: 0 5px;
 
-                    > img {
+                    >img {
                         padding: 10px;
                     }
                 }
@@ -136,7 +136,7 @@
                     margin-left: auto;
                     margin-right: auto;
 
-                    > img {
+                    >img {
                         padding: 15px 30px;
                     }
                 }
@@ -153,6 +153,128 @@
             text-transform: uppercase;
             font-weight: 700;
             color: #223d73;
+        }
+
+        .uk-table {
+            border-spacing: 0px 10px;
+            border-collapse: separate;
+
+            th {
+                color: #223d73;
+            }
+
+            tbody {
+                tr {
+                    background: #fff;
+
+                    td {
+                        color: #595959;
+                    }
+                }
+            }
+        }
+
+        hr {
+            border-top: 2px solid #223d73;
+            margin: 40px 0;
+        }
+
+
+        .mediaDownload {
+            display: flex;
+            justify-content: center;
+
+            ul {
+                list-style: none;
+
+                >li {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: #223d73;
+                    font-size: 17px;
+
+                    .uk-button-default {
+                        background: #223d73;
+                        color: #fff;
+                        font-weight: 700;
+                        border: none;
+                        outline: none;
+                        box-shadow: 0 5px #0e2356;
+
+                        &:active {
+                            box-shadow: 0 5px #0e2356;
+                            transform: translateY(4px);
+                        }
+                    }
+
+                    @media(min-width: 1200px) {
+                        display: inline-block;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#relatedProduct {
+    background: #002454;
+    padding: 40px 0 60px 0;
+
+    .productContent {
+        background-color: #ececec;
+        padding: 40px;
+        margin-top: -6%;
+
+        p {
+            color: #0e2356;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        hr {
+            border-top: 1px solid #002454;
+            width: 20%;
+            margin: 0px;
+        }
+
+        .uk-card-default {
+            padding: 30px;
+            border: 1px solid #cacaca;
+
+            .codProduct {
+                color: #ffcb05;
+                font-weight: 700;
+                font-size: 25px;
+            }
+
+            .nameProduct {
+                color: #223d73;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+
+            .model {
+                font-weight: 700;
+                color: #223d73;
+            }
+
+            .uk-button-default {
+                background: #ffcb05;
+                color: #223d73;
+                font-weight: 700;
+                border: none;
+                outline: none;
+                box-shadow: 0 5px #cca404;
+
+                &:active {
+                    box-shadow: 0 5px #cca404;
+                    transform: translateY(4px);
+                }
+            }
         }
     }
 }
