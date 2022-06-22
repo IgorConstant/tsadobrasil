@@ -20,13 +20,8 @@ RewriteRule ^resultado$                               index.php?page=resultado-b
 RewriteRule ^area-tecnica$                            index.php?page=area-tecnica
 RewriteRule ^downloads$                               index.php?page=downloads
 RewriteRule ^contato$                                 index.php?page=contato
+RewriteRule ^onde-encontrar$                          index.php?page=onde-encontrar
 RewriteRule ^produto-interno$                         index.php?page=produto-interna
-
-
-
-
-
-
 
 
 # ------------------------------------------------------
