@@ -53,6 +53,66 @@ h6 {
     }
 }
 
+.searchFormPieces {
+    background: #ffcb05;
+    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+
+    p {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #223d73;
+    }
+
+    form {
+        ::-webkit-input-placeholder {
+            color: #223d73;
+            font-size: 10px;
+        }
+
+        input:-moz-placeholder {
+            color: #223d73;
+            font-size: 10px;
+        }
+
+        textarea:-moz-placeholder {
+            color: #223d73;
+            font-size: 10px;
+        }
+
+        .uk-button-default {
+            background: #223d73;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            padding: 1px 16px;
+
+
+            @media(min-width: 1200px) {
+                margin-left: -5px;
+            }
+
+            @media(max-width: 768px) {
+                margin: 10px 0;
+            }
+        }
+
+        .uk-input {
+            border: 1px solid #223d73;
+        }
+
+        .uk-select {
+            border: 1px solid #223d73;
+            color: #223d73;
+            font-size: 12px;
+        }
+    }
+}
+
 .searchForm {
     background: #ffcb05;
     padding: 30px;
@@ -62,9 +122,6 @@ h6 {
     margin-top: -50px;
     position: relative;
 
-    @media(min-width: 1200px) {
-        margin-top: -70px;
-    }
 
     p {
         text-transform: uppercase;

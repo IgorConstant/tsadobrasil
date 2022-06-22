@@ -158,6 +158,7 @@
         .uk-table {
             border-spacing: 0px 10px;
             border-collapse: separate;
+            padding: 10px;
 
             th {
                 color: #223d73;
@@ -169,6 +170,10 @@
 
                     td {
                         color: #595959;
+
+                        @media(max-width: 999px) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -184,6 +189,10 @@
             display: flex;
             justify-content: center;
 
+            @media(max-width: 999px) {
+                text-align: center;
+            }
+
             ul {
                 list-style: none;
 
@@ -192,6 +201,7 @@
                     font-weight: 700;
                     color: #223d73;
                     font-size: 17px;
+                    margin-bottom: 20px;
 
                     .uk-button-default {
                         background: #223d73;
