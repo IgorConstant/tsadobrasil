@@ -44,7 +44,7 @@
         </div>
 
         <div class="contentSection">
-            <div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+            <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                 <div>
                     <div>
                         <div class="blockImg uk-text-center">
@@ -70,7 +70,7 @@
         </div>
 
         <div class="contentSection">
-            <div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+            <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                 <div>
                     <div>
                         <div class="blockImg uk-text-center">

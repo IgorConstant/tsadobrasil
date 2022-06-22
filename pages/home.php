@@ -1,3 +1,51 @@
+<div class="searchFormPieces">
+    <div class="uk-container">
+        <div uk-grid>
+            <div class="uk-width-1-3@m">
+                <div>
+                    <p>Pesquisar produtos</p>
+                    <form action="" method="POST">
+                        <div class="uk-margin">
+                            <input class="uk-input uk-form-width-medium" type="text" placeholder="Pesquise pelo nome do produto ou código">
+                            <button class="uk-button uk-button-default" type="submit">PESQUISAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="uk-width-expand@m">
+                <div>
+                    <p>Pesquisa avançada</p>
+                    <form class="uk-grid-small" action="" method="POST" uk-grid>
+                        <div class="uk-width-1-4@s">
+                            <select class="uk-select" id="form-horizontal-select">
+                                <option selected>Montadora</option>
+                                <option>Option 01</option>
+                                <option>Option 02</option>
+                            </select>
+                        </div>
+                        <div class="uk-width-1-4@s">
+                            <select class="uk-select" id="form-horizontal-select">
+                                <option selected>Modelo</option>
+                                <option>Option 1</option>
+                                <option>Option 02</option>
+                            </select>
+                        </div>
+                        <div class="uk-width-1-4@s">
+                            <select class="uk-select" id="form-horizontal-select">
+                                <option selected>Linha</option>
+                                <option>Option 1</option>
+                                <option>Option 02</option>
+                            </select>
+                        </div>
+                        <div class="uk-width-1-4@s">
+                            <button class="uk-button uk-button-default">PESQUISAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <section id="sliderHeader">
     <div class="uk-container-expand">
         <div class="uk-grid-collapse" uk-grid>
@@ -49,53 +97,6 @@
 
 <section id="introContent">
     <div class="uk-container">
-        <div class="searchForm">
-            <div uk-grid>
-                <div class="uk-width-1-3@m">
-                    <div>
-                        <p>Pesquisar produtos</p>
-                        <form action="" method="POST">
-                            <div class="uk-margin">
-                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Pesquise pelo nome do produto ou código">
-                                <button class="uk-button uk-button-default" type="submit">PESQUISAR</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="uk-width-expand@m">
-                    <div>
-                        <p>Pesquisa avançada</p>
-                        <form class="uk-grid-small" action="" method="POST" uk-grid>
-                            <div class="uk-width-1-4@s">
-                                <select class="uk-select" id="form-horizontal-select">
-                                    <option selected>Montadora</option>
-                                    <option>Option 01</option>
-                                    <option>Option 02</option>
-                                </select>
-                            </div>
-                            <div class="uk-width-1-4@s">
-                                <select class="uk-select" id="form-horizontal-select">
-                                    <option selected>Modelo</option>
-                                    <option>Option 1</option>
-                                    <option>Option 02</option>
-                                </select>
-                            </div>
-                            <div class="uk-width-1-4@s">
-                                <select class="uk-select" id="form-horizontal-select">
-                                    <option selected>Linha</option>
-                                    <option>Option 1</option>
-                                    <option>Option 02</option>
-                                </select>
-                            </div>
-                            <div class="uk-width-1-4@s">
-                                <button class="uk-button uk-button-default">PESQUISAR</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="contentTruck">
             <div class="textContent">
                 <p class="title uk-margin-remove">Linha Pesada</p>

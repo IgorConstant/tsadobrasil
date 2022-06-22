@@ -18,7 +18,7 @@
 
 <section id="formBlock">
     <div class="uk-container">
-        <div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+        <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
             <div>
                 <div class="uk-card uk-card-default uk-card-body cardContact">
                     <form class="uk-grid-small" action="" method="POST" uk-grid>
