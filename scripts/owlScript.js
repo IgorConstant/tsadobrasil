@@ -10,10 +10,12 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 1
+                items: 2,
+                nav: false
             },
             600: {
-                items: 3
+                items: 3,
+                nav: false
             },
             1000: {
                 items: 5
@@ -25,19 +27,20 @@ $(document).ready(function () {
     owl.owlCarousel({
         loop: true,
         margin: 30,
-        nav: true,
         autoplay: true,
         autoplayTimeout: 2500,
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false
             },
             600: {
                 items: 3
             },
             1000: {
-                items: 4
+                items: 4,
+                nav: true
             }
         }
     })
@@ -46,7 +49,7 @@ $(document).ready(function () {
     owl.owlCarousel({
         loop: true,
         margin: 30,
-        nav: true,
+        nav: false,
         autoplay: true,
         autoplayTimeout: 2500,
         autoplayHoverPause: true,
