@@ -58,8 +58,107 @@
                     </div>
                 </div>
 
-                <div class="applicationTable">
+                <div class="applicationTable uk-overflow-auto">
                     <p class="uk-text-center uk-margin-remove">Tabela de Aplicações</p>
+
+                    <table class="uk-table uk-text-center">
+                        <thead>
+                            <tr>
+                                <th>Veículo</th>
+                                <th>Modelo</th>
+                                <th>Motor</th>
+                                <th>Ano</th>
+                                <th>Combustível</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pajero</td>
+                                <td>Sport</td>
+                                <td>3.5V6</td>
+                                <td>2009 > 2011</td>
+                                <td>Flex</td>
+                            </tr>
+                            <tr>
+                                <td>Pajero</td>
+                                <td>Sport</td>
+                                <td>3.5V6</td>
+                                <td>2009 > 2011</td>
+                                <td>Flex</td>
+                            </tr>
+                            <tr>
+                                <td>Pajero</td>
+                                <td>Sport</td>
+                                <td>3.5V6</td>
+                                <td>2009 > 2011</td>
+                                <td>Flex</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <hr />
+
+                    <div class="mediaDownload">
+                        <ul>
+                            <li>Downloads</li>
+                            <li>
+                                <a class="uk-button uk-button-default" href="" target="_blank">Manual de Montagem</a>
+                            </li>
+                            <li>
+                                <a class="uk-button uk-button-default" href="" target="_blank">Lâmina</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="relatedProduct">
+    <div class="uk-container">
+        <div class="productContent">
+            <p class="uk-margin-remove">Produtos Relacionados</p>
+            <hr />
+
+            <div class="uk-margin-top">
+                <div class="owl-carousel owl-theme" id="productsCat2">
+                    <div class="item">
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <p class="uk-margin-remove codProduct">T-130091</p>
+                            <p class="uk-margin-remove nameProduct">SENSOR ABS</p>
+                            <span class="model">Ford</span>
+                            <img class="uk-margin-top uk-margin-bottom" src="assets/images/T-130091.png" alt="Example">
+                            <a class="uk-button uk-button-default uk-align-right" href="#">Conheça</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <p class="uk-margin-remove codProduct">T-130091</p>
+                            <p class="uk-margin-remove nameProduct">SENSOR ABS</p>
+                            <span class="model">Ford</span>
+                            <img class="uk-margin-top uk-margin-bottom" src="assets/images/T-130091.png" alt="Example">
+                            <a class="uk-button uk-button-default uk-align-right" href="#">Conheça</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <p class="uk-margin-remove codProduct">T-130091</p>
+                            <p class="uk-margin-remove nameProduct">SENSOR ABS</p>
+                            <span class="model">Ford</span>
+                            <img class="uk-margin-top uk-margin-bottom" src="assets/images/T-130091.png" alt="Example">
+                            <a class="uk-button uk-button-default uk-align-right" href="#">Conheça</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <p class="uk-margin-remove codProduct">T-130091</p>
+                            <p class="uk-margin-remove nameProduct">SENSOR ABS</p>
+                            <span class="model">Ford</span>
+                            <img class="uk-margin-top uk-margin-bottom" src="assets/images/T-130091.png" alt="Example">
+                            <a class="uk-button uk-button-default uk-align-right" href="#">Conheça</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

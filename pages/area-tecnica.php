@@ -63,7 +63,26 @@
                     <li>
                         <a class="uk-accordion-title" href="#">PROCEDIMENTO PARA A SUBSTITUIÇÃO DO SENSOR DE NÍVEL DE COMBUSTÍVEL DOS VEÍCULOS FLEX</a>
                         <div class="uk-accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+                                <div>
+                                    <div>
+                                        <p><b>Após retirar o conjunto de bomba do veículo e o sensor de nível de combustível defeituoso:</b></p>
+                                        <p><b>1-</b> Verificar se existe oxidação nos terminais do conector do sensor de nível de combustível e do conector da flange.</p>
+                                        <p><b>2-</b> Verificar se os anéis de vedação estão danificados ou cortados, causando infiltração de combustível nos terminais.</p>
+                                        <p><b>3-</b> Caso sejam constatados os problemas descritos nos itens 1 e 2, esses deverão ser corrigidos primeiramente a fim de evitar danos no novo sensor de nível a ser montado.</p>
+                                        <p><b>4-</b> Ao instalar o novo sensor de nível no conjunto bomba, deverá ser realizado o teste do circuito elétrico do veículo conforme os passos.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <p><b>a.</b> Retire o fusível correspondente ao funcionamento da bomba de combustível.</p>
+                                        <p><b>b.</b> Coloque a haste do sensor de nível de combustível na posição vazio e desligue o cabo da bateria por 5 minutos.</p>
+                                        <p><b>c.</b> Após os 5 minutos, ligue novamente o cabo da bateria, ligue a chave de ignição e verifique se o marcador está indicando vazio.. Feito esse procedimento, passe para o próximo passo.</p>
+                                        <p><b>d.</b> Desligue o cabo da bateria por 5 minutos e coloque a haste do sensor de nível de combustível na posição cheio. Ligue novamente o cabo da bateria, ligue a chave de ignição e verifique se o marcador está indicando cheio.</p>
+                                        <p><b>e.</b> Estando com funcionamento perfeito, desligue o cabo da bateria, monte o conjunto bomba no tanque e recoloque o fusível retirado </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li>

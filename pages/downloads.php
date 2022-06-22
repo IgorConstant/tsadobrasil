@@ -38,7 +38,29 @@
                         </div>
                     </div>
                     <div class="uk-width-expand@m">
-                        <div class="uk-card uk-card-default uk-card-body">Expand</div>
+                        <div class="grayBox uk-card uk-card-default uk-card-body">
+                            <div class="content">
+                                <h4 class="uk-margin-remove">Aplicativo TSA</h4>
+                                <p class="uk-margin-remove">Tenha acesso rápido a qualquer momento na palma da mão</p>
+                                <ul>
+                                    <li>
+                                        <a href="https://play.google.com/store/apps/details?id=br.com.ideia2001.CatalogoTSA&hl=pt_BR&gl=US" target="_blank">
+                                            <img src="assets/images/btn-google-play.png" alt="Google Play">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://itunes.apple.com/br/app/tsa-app/id1459098981?mt=8" target="_blank">
+                                            <img src="assets/images/btn-apple.png" alt="App Store">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.microsoft.com/br-pt/store/apps/tsa-app/9nblgghj3jfq" target="_blank">
+                                            <img src="assets/images/btn-desktop.png" alt="Desktop">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

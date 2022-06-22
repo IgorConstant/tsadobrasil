@@ -100,7 +100,7 @@
             <div class="textContent">
                 <p class="title uk-margin-remove">Linha Pesada</p>
                 <p class="subtitle uk-margin-remove">CONHEÇA NOSSOS PRODUTOS PARA CAMINHÕES</p>
-                <div class="buttonBlock uk-margin-top">
+                <div class="buttonBlock">
                     <a href="#" class="uk-button uk-button-default">Saiba Mais</a>
                 </div>
             </div>

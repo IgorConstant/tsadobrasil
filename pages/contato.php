@@ -22,16 +22,16 @@
             <div>
                 <div class="uk-card uk-card-default uk-card-body cardContact">
                     <form class="uk-grid-small" action="" method="POST" uk-grid>
-                        <div class="uk-width-1-1">
+                        <div class="uk-width-1-1@s">
                             <input class="uk-input" name="nome" type="text" placeholder="Nome Completo">
                         </div>
-                        <div class="uk-width-1-2">
+                        <div class="uk-width-1-2@s">
                             <input class="uk-input" name="email" type="email" placeholder="E-mail">
                         </div>
-                        <div class="uk-width-1-2">
+                        <div class="uk-width-1-2@s">
                             <input class="uk-input" name="telefone" type="email" placeholder="Telefone">
                         </div>
-                        <div class="uk-width-1-2">
+                        <div class="uk-width-1-2@s">
                             <select class="uk-select" id="form-stacked-select" id="estado" name="estado">
                                 <option value="">Selecione o Estado</option>
                                 <option value="AC">Acre</option>
@@ -64,10 +64,10 @@
                                 <option value="EX">Estrangeiro</option>
                             </select>
                         </div>
-                        <div class="uk-width-1-2">
+                        <div class="uk-width-1-2@s">
                             <input class="uk-input" name="cidade" type="email" placeholder="Cidade">
                         </div>
-                        <div class="uk-width-1-3">
+                        <div class="uk-width-1-3@s">
                             <div class="uk-form-label">ASSUNTO</div>
                             <div class="uk-form-controls">
                                 <label><input class="uk-radio" type="radio" name="radio1"> Marketing</label><br>
@@ -75,14 +75,14 @@
                                 <label><input class="uk-radio" type="radio" name="radio1"> Financeiro</label><br>
                             </div>
                         </div>
-                        <div class="uk-width-1-3 blockTwo">
+                        <div class="uk-width-1-3@s blockTwo">
                             <div class="uk-form-controls">
                                 <label><input class="uk-radio" type="radio" name="radio1"> Compras</label><br>
                                 <label><input class="uk-radio" type="radio" name="radio1"> Vendas</label><br>
                                 <label><input class="uk-radio" type="radio" name="radio1"> Comércio Exterior</label><br>
                             </div>
                         </div>
-                        <div class="uk-width-1-3 blockThree">
+                        <div class="uk-width-1-3@s blockThree">
                             <div class="uk-form-controls">
                                 <label><input class="uk-radio" type="radio" name="radio1"> Qualidade/Garantia</label><br>
                                 <label><input class="uk-radio" type="radio" name="radio1"> Suporte Técnico</label><br>
