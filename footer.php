@@ -1,6 +1,6 @@
 <footer>
     <div class="uk-container">
-        <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+        <div class="uk-child-width-1-1@s uk-child-width-1-4@m" uk-grid>
             <div>
                 <div>
                     <div class="logoFooter">
