@@ -1,0 +1,68 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Resultado da Busca -
+{% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+	<section id="introBlock">
+		<div class="uk-container">
+			<div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove">Resultados da Busca</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove float-right">TSA
+							<span style="color: #ffcb05;">\\</span>
+							te leva mais longe</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="mainBlock">
+		<div class="uk-container">
+
+			<div class="searchForm">
+				{% include 'site/includes/busca.twig' %}
+			</div>
+
+			<div class="productsList">
+
+				{% if results|length == 0 %}
+					<div class="infoCustomer">
+						<div class="uk-grid-collapse" uk-grid>
+							<h2>Nenhum produto encontrado!</h2>
+						</div>
+					</div>
+				{% endif %}
+
+				<div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+
+					{% for r in results %}
+						<div>
+							<div class="uk-card uk-card-default uk-card-body">
+								<p class="uk-margin-remove codProduct">{{r.codigo_tsa}}</p>
+								<p class="uk-margin-remove nameProduct">{{r.linha.linha}}</p>
+								<span class="model">{{r.montadora.montadora}}</span>
+								<img class="uk-margin-top uk-margin-bottom" src="{{ base_url() }}/thumb.php?img=assets/uploads/produtos/{{ r.fotos[0].imagem }}&w=400&h=235" alt="Example">
+								<a class="uk-button uk-button-default uk-align-right" href="{{ path_for('produtos_detalhes', {'montadora': r.montadora.montadora_url,'codigo': r.codigo_tsa_url,'id': r.id} )}}">Conheça</a>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+			</div>
+
+			<div class="blockPagination uk-flex uk-flex-center">
+				{{ pagesLink | raw }}
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
+
+{% block js %}{% endblock %}

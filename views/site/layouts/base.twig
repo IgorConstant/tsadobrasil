@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A TSA é uma empresa de autopeças especializada na fabricação de sensores de nível de combustível.">
+		<meta name="author" content="Igor Henrique Constant">
+
+		<title>
+			{% block title %}{% endblock %}TSA do Brasil</title>
+
+		<base href="{{ base_url() }}">
+
+		<title>TSA do Brasil</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="{{ base_url() }}/assets/site/css/main.css">
+
+	</head>
+
+	<body>
+		<div id="google_translate_element"></div>
+		<header>
+			<div uk-sticky="sel-target: .uk-container; cls-active: uk-navbar-sticky">
+				<nav class="uk-container uk-padding-small" uk-navbar="mode: click">
+					<div class="uk-navbar-left">
+						<a class="uk-navbar-item uk-logo" href="{{ path_for('home' )}}">
+							<img src="{{base_url()}}/assets/site/images/logo-tsa.png" alt="Logo TSA">
+						</a>
+					</div>
+					<div class="uk-navbar-center uk-visible@l">
+						<ul class="uk-navbar-nav">
+							<li>
+								<a href="{{ path_for('empresa' )}}">Empresa</a>
+							</li>
+							<li>
+								<a href="{{ path_for('produtos' )}}">Produtos</a>
+							</li>
+							<li>
+								<a href="{{ path_for('encontrar' )}}">Representantes</a>
+							</li>
+							<li>
+								<a href="{{ path_for('tecnica' )}}">Área Técnica</a>
+							</li>
+							<li>
+								<a href="{{ path_for('downloads' )}}">Catálogos</a>
+							</li>
+							<li>
+								<a href="{{ path_for('contato' )}}">Contato</a>
+							</li>
+							<li>
+								<a href="{{ path_for('areacliente' )}}">Área do Cliente</a>
+							</li>
+						</ul>
+					</div>
+					<div class="uk-navbar-right uk-visible@l">
+						<ul class="uk-navbar-nav">
+							<li>
+								<a href="javascript:trocarIdioma('pt')"><img src="{{base_url()}}/assets/site/images/icon-brasil.jpg" alt="Português Brasil" title="Português Brasil"></a>
+							</li>
+							<li>
+								<a href="javascript:trocarIdioma('en')"><img src="{{base_url()}}/assets/site/images/icon-usa.jpg" alt="Inglês - English" title="Inglês"></a>
+							</li>
+							<li>
+								<a href="javascript:trocarIdioma('es')"><img src="{{base_url()}}/assets/site/images/icon-esp.jpg" alt="Espanhol - Spanish" title="Espanhol"></a>
+							</li>
+						</ul>
+					</div>
+					<!-- Canvas -->
+					<a class="uk-navbar-toggle uk-hidden@l uk-position-right" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav-primary">
+						<span class="off-canvas"></span>
+					</a>
+				</nav>
+			</div>
+		</header>
+
+		<div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true;">
+			<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+				<div class="brand uk-text-center">
+					<a class="uk-offcanvas-brand" href="#"><img src="{{base_url()}}/assets/site/images/logo-tsa.png" alt="Logo TSA do Brasil"></a>
+				</div>
+				<ul class="uk-nav uk-nav-primary uk-padding-small uk-nav-left uk-margin-auto-vertical">
+					<li>
+						<a href="{{ path_for('empresa' )}}">Empresa</a>
+					</li>
+					<li>
+						<a href="{{ path_for('produtos' )}}">Produtos</a>
+					</li>
+					<li>
+						<a href="{{ path_for('encontrar' )}}">Representantes</a>
+					</li>
+					<li>
+						<a href="{{ path_for('tecnica' )}}">Área Técnica</a>
+					</li>
+					<li>
+						<a href="{{ path_for('downloads' )}}">Catálogos</a>
+					</li>
+					<li>
+						<a href="{{ path_for('contato' )}}">Contato</a>
+					</li>
+					<li>
+						<a href="{{ path_for('areacliente' )}}">Área do Cliente</a>
+					</li>
+					<li class="uk-nav-divider"></li>
+					<li class="idiomas">
+						<a href="javascript:trocarIdioma('pt')"><img src="{{base_url()}}/assets/site/images/icon-brasil.jpg" alt="Português Brasil" title="Português Brasil"></a>
+					</li>
+					<li class="idiomas">
+						<a href="javascript:trocarIdioma('en')"><img src="{{base_url()}}/assets/site/images/icon-usa.jpg" alt="Inglês - English" title="Inglês"></a>
+					</li>
+					<li class="idiomas">
+						<a href="javascript:trocarIdioma('es')"><img src="{{base_url()}}/assets/site/images/icon-esp.jpg" alt="Espanhol - Spanish" title="Espanhol"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		{% block content %}{% endblock %}
+
+		<footer>
+			<div class="uk-container">
+				<div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+					<div>
+						<div>
+							<div class="logoFooter">
+								<p>Localização</p>
+								<address>
+									Rod. Dep. Archimedes Lammoglia Km 23  Chácara São João Itu/SP – 13312-500
+								</address>
+								<ul>
+									<li><a href="https://www.youtube.com/channel/UC-_KfKvkbn5gVJVn9R9uosQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+									<li><a href="https://web.facebook.com/tsa.dobrasil/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href=""><i class="fab fa-instagram"></i></a></li>
+									<li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div>
+							<div class="titleFooter">
+								<p>Fale Conosco</p>
+								<a class="mailTSA" href="tel:01140139960">(11) 4013-9960</a>
+								<div class="mailBlock">
+									<span>Email:</span>
+									<br>
+									<a class="mailTSA" href="mailto:atendimento@tsadobrasil.com.br">atendimento@tsadobrasil.com.br</a>
+								</div>
+								<div class="supportBlock">
+									<span>WhatsApp - Suporte Técnico:</span>
+									<br>
+									<a class="wppTecnico" href="https://api.whatsapp.com/send?phone=5511963749282&text=Ol%C3%A1!%20Gostaria%20do%20suporte%20TSA%20do%20Brasil" target="_blank">(11) 9 6374-9282</a>
+									<br>
+									<a class="wppTecnico" href="https://api.whatsapp.com/send?phone=5511996325684&text=Ol%C3%A1!%20Gostaria%20de%20suporte%20t%C3%A9cnico%20TSA%20do%20Brasil" target="_blank">(11) 9 9632-5684</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div>
+							<div class="titleFooter">
+								<p>Novidades TSA</p>
+								<div class="newsTSA">
+									<form action="{{ path_for('newsletter_ajax' )}}" method="POST" id="SendNewsletter">
+
+										<label class="uk-form-label" for="emailNews">Email</label>
+										<input class="uk-input NewsCampos" type="email" name="email" required>
+
+										<label class="uk-form-label" for="telNews">Telefone</label>
+										<input class="uk-input NewsCampos" id="phoneNews" type="tel" name="telefone" required>
+
+										<label class="checkLabel"><input class="uk-checkbox" type="checkbox">
+											Aceito receber comunicações da TSA</label>
+										<button class="uk-button uk-button-default">Enviar</button>
+
+										<div id="msgNews"></div>
+
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div>
+							<div
+								class="stamps">{# <img src="{{base_url()}}/assets/site/images/duns-registered-logo.png" alt="Certificados ISO 9001 e DUNS Registered Logo"> #}
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr/>
+				<div class="copyright">
+					<p class="uk-margin-remove">{{ "now"|date("Y") }}
+						© Copyright | TSA do Brasil | Todos os direitos reservados</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- JS -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="{{base_url()}}/assets/site/js/main.js"></script>
+		<script src="{{base_url()}}/assets/site/js/owl.carousel.min.js"></script>
+		<script src="{{base_url()}}/assets/site/js/owlScript.js"></script>
+		<script src="{{base_url()}}/assets/site/js/gMap.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+		<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script src="{{base_url()}}/assets/site/js/tradutor.js"></script>
+
+		<script>
+			$(document).ready(function () {
+$('#phoneNews').mask('(00) 0000-0000');
+$('.telCliente').mask('(00) 0000-0000');
+$('.telContato').mask('(00) 0000-0000');
+});
+		</script>
+
+		<script>
+			$(document).ready(function () {
+$("#montadoras").change(function () {
+url = '{{ base_url() }}/veiculos/ajax/' + $(this).val();
+sub = $(this).attr("sub");
+$.get(url, function (data) {
+$('#' + sub).empty().append(data);
+});
+});
+$("#veiculos").change(function () {
+url = '{{ base_url() }}/modelos/ajax/' + $(this).val();
+sub = $(this).attr("sub");
+$.get(url, function (data) {
+$('#' + sub).empty().append(data);
+});
+});
+});
+		</script>
+
+		<script type='text/javascript'>
+			$("#SendNewsletter").submit(function () {
+$('#msgNews').html('');
+var url = $(this).attr('action');
+$.ajax({
+type: "POST", url: url, data: $(this).serialize(), // serializes the form's elements.
+success: function (data) {
+if (data == 'sucesso') {
+$('#msgNews').html('Enviado com sucesso!');
+} else if (data == 'error') {
+$('#msgNews').html('E-mail já cadastrado!');
+} else if (data == 'empty') {
+$('#msgNews').html('Prencha todos os campos');
+}
+$(".NewsCampos").val("");
+}
+});
+
+return false;
+});
+		</script>
+
+		{% block js %}{% endblock %}
+
+	</body>
+
+</html>

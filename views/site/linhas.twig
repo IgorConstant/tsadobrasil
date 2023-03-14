@@ -1,0 +1,57 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}{{ linha }} - Produtos{% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+<section id="breadcrumbs">
+  <div class="uk-container">
+    <div class="contentBreadcrumb">
+      <p class="uk-margin-remove">{{ linha }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="mainBlock">
+  <div class="uk-container">
+    <div class="productsList">
+      <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+
+        {% for r in d %}
+        <div>
+          <div class="uk-card uk-card-default uk-card-body">
+            <p class="uk-margin-remove codProduct">{{r.codigo_tsa}}</p>
+            <p class="uk-margin-remove nameProduct">{{r.linha.linha}}</p>
+            <span class="model">{{r.montadora.montadora}}</span>
+            <img class="uk-margin-top uk-margin-bottom" src="{{ base_url() }}/thumb.php?img=assets/uploads/produtos/{{ r.fotos[0].imagem }}&w=400&h=235" alt="Example">
+            <a class="uk-button uk-button-default uk-align-right" href="{{ path_for('produtos_detalhes', {'montadora': r.montadora.montadora_url,'codigo': r.codigo_tsa_url,'id': r.id} )}}">Conheça</a>
+          </div>
+        </div>        
+        {% endfor %}
+
+      </div>
+    </div>
+    
+    <div class="blockPagination uk-flex uk-flex-center">
+      {{ pagesLink | raw }}
+      {#
+      <ul class="uk-pagination" uk-margin>
+        <li><a href="#"><span uk-pagination-previous></span></a></li>
+        <li><a href="#">1</a></li>
+        <li class="uk-disabled"><span>…</span></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li class="uk-active"><span>7</span></li>
+        <li><a href="#">8</a></li>
+        <li><a href="#"><span uk-pagination-next></span></a></li>
+      </ul>
+      #}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

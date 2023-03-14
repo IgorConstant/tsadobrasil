@@ -1,0 +1,84 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Login - Área do Cliente -
+{% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+
+	<section id="introBlock">
+		<div class="uk-container">
+			<div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove">Área do Cliente</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove float-right">TSA
+							<span style="color: #ffcb05;">\\</span>
+							te leva mais longe</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="mainBlock">
+		<div class="contentBlockClientes">
+			<div class="uk-container">
+				<div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-text-center" uk-grid>
+					<div>
+						<div>
+							<h2 class="titleCadastroCliente">Realizar Login</h2>
+							{% include "components/notifications.twig" %}
+							<form class="uk-grid-small" method="POST" uk-grid action="" id="login">
+								<div class="uk-width-1-1@s">
+									<input class="uk-input" name="email" type="email" placeholder="E-mail" required>
+								</div>
+								<div class="uk-width-1-1@s">
+									<input class="uk-input" name="password" type="password" placeholder="Senha" required>
+								</div>
+								<div class="uk-width-1-1">
+									<button type="submit" class="uk-button uk-button-default uk-width-1-1">
+										Logar</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div>
+						<div>
+							<h2 class="titleCadastroCliente">Realizar Cadastro</h2>
+							<form class="uk-grid-small" method="POST" uk-grid action="{{ path_for('areacliente_add' )}}" id="cadastro">
+								<div class="uk-width-1-1@s">
+									<input class="uk-input" name="nome" type="text" placeholder="Seu nome" required>
+								</div>
+								<div class="uk-width-1-1@s">
+									<input class="uk-input telCliente" name="telefone" type="tel" placeholder="Seu telefone" required>
+								</div>
+								<div class="uk-width-1-1@s">
+									<input class="uk-input" name="email" type="email" placeholder="Seu e-mail" required>
+								</div>
+								<div class="uk-width-1-1@s">
+									<input class="uk-input cpfCliente" name="cpf" type="text" placeholder="Seu CPF (000.000.000-00) / CNPJ (00.000.000/0000-00)" required>
+								</div>
+								<div class="uk-width-1-1@s">
+									<input class="uk-input" name="senha" type="pass" placeholder="Senha" required>
+								</div>
+								<div class="uk-width-1-1">
+									<button type="submit" class="uk-button uk-button-default uk-width-1-1">
+										Cadastrar</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}
+
+{% block js %}{% endblock %}

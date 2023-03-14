@@ -1,0 +1,56 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Add - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ path_for('app.'~page) }}">{{ title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Adicionar</li>
+        </ol>
+    </nav>
+    <a href="{{ path_for('app.'~page)}}" class="btn btn-secondary"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ path_for('app.'~page~'.create' )}}" method="POST" enctype="multipart/form-data" id="validate">
+
+<div class="panel">
+    <div class="panel-body">
+    
+        <h3>DADOS</h3>
+        <div class="row">                   
+            <div class="form-group col-sm-6">
+                <label>Veículo:</label>
+                <select name="veiculo" class="form-control" validate>
+                    <option value=""></option>
+                    {% for e in configs.veiculos %}
+                    <option value="{{e.id}}">{{e.veiculo}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Modelo: </label>
+                <input type="text" name="modelo" class="form-control" validate>
+            </div>
+        </div>        
+
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">ENVIAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+
+</form>
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

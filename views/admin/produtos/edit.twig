@@ -1,0 +1,240 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Edit - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ path_for('app.'~page) }}">{{ title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Editar</li>
+        </ol>
+    </nav>
+    <a href="{{ path_for('app.'~page)}}" class="btn btn-secondary"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ path_for('app.'~page~'.update', {'id': d.id} )}}" method="POST" enctype="multipart/form-data" id="validate">
+<div class="panel">
+    <div class="panel-body">
+        <h3>DADOS</h3>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label>Linha:</label>
+                <select name="linha" class="form-control" validate>
+                    <option value=""></option>
+                    {% for e in configs.linhas %}
+                    <option value="{{e.id}}" {{ (d.linha_id == e.id) ? 'selected' : '' }}>{{e.linha}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Montadora:</label>
+                <select name="" class="form-control" id="montadora" validate disabled>
+                    <option value=""></option>
+                    {% for e in configs.montadoras %}
+                    <option value="{{e.id}}" {{ (d.montadora_id == e.id) ? 'selected' : '' }}>{{e.montadora}}</option>
+                    {% endfor %}
+                    <input type="hidden" name="montadora" class="form-control" value="{{ d.montadora_id }}" validate>
+                </select>
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Código TSA:</label>
+                <input type="text" name="codigo_tsa" class="form-control" value="{{ d.codigo_tsa }}" validate>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label>Código Original: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Adicionar um código por linha"></i></label>
+                <textarea name="codigo_original" class="form-control">{{ d.codigo_original }}</textarea>
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Código Outros: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Adicionar um código por linha"></i></label>
+                <textarea name="codigo_outros" class="form-control">{{ d.codigo_outros }}</textarea>
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Código Oculto: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Adicionar um código por linha"></i></label>
+                <textarea name="codigo_oculto" class="form-control">{{ d.codigo_oculto }}</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label>Compátível:</label>
+                <input type="text" name="compativel" class="form-control" value="{{ d.compativel }}">
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Valor Ohmico: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-html="true" title="Um por linha, ex.:<br> Cheio: 3 a 4<br> Meio: 33 a 37<br> Vazio: 73 a 81"></i></label>
+                <textarea name="valor_ohmico" class="form-control">{{ d.valor_ohmico }}</textarea>
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Observações:</label>
+                <textarea name="observacoes" class="form-control">{{ d.observacoes }}</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label>Relacionados: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Adicionar um código por linha"></i></label>
+                <textarea name="relacionados" class="form-control">{{ d.relacionados }}</textarea>
+            </div>
+        </div>
+
+
+        <h3>MATERIAIS</h3>
+        <div class="row">     
+            <div class="form-group col-sm-6">
+                <label>Manual: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Arquivo: PDF"></i> 
+                    {% if d.arquivo_manual != '' %}
+                    <a class="btn btn-micro" alt="View" title="View" target="new" href="{{ base_url() }}/assets/uploads/produtos/catalogos/{{ d.arquivo_manual }}"><i class="fa fa-eye"></i></a>
+                    <a class="btn btn-micro confirm" alt="Excluir" title="Excluir" data-toggle="modal" data-target="#ConfirmModal" data-href="{{ path_for('app.'~page~'.delCatalogo', {'id': d.id}) }}"><i class="fa fa-trash-o"></i></a>
+                    {% endif %}
+                </label>
+                <input class="form-control" type="file" name="arquivo"  accept="application/pdf">
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Lamina: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Arquivo: PDF"></i> 
+                    {% if d.arquivo_lamina != '' %}
+                    <a class="btn btn-micro" alt="View" title="View" target="new" href="{{ base_url() }}/assets/uploads/produtos/catalogos/{{ d.arquivo_lamina }}"><i class="fa fa-eye"></i></a>
+                    <a class="btn btn-micro confirm" alt="Excluir" title="Excluir" data-toggle="modal" data-target="#ConfirmModal" data-href="{{ path_for('app.'~page~'.delCatalogo', {'id': d.id}) }}"><i class="fa fa-trash-o"></i></a>
+                    {% endif %}
+                </label>
+                <input class="form-control" type="file" name="arquivo_lamina"  accept="application/pdf">
+            </div>
+        </div>
+
+        <h3>DESTAQUE</h3>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label>Destaque: </label>
+                <select name="destaque" class="form-control" validate>
+                    <option value="N" {{ (d.destaque == 'N') ? 'selected' : '' }}>Não</option>
+                    <option value="S" {{ (d.destaque == 'S') ? 'selected' : '' }}>Sim</option>
+                </select>
+            </div>     
+            <div class="form-group col-sm-6">
+                <label>Status: </label>
+                <select name="status" class="form-control" validate>
+                    <option value="A" {{ (d.status == 'A') ? 'selected' : '' }}>Ativado</option>
+                    <option value="D" {{ (d.status == 'D') ? 'selected' : '' }}>Desativado</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>VEÍCULOS</h3>
+        <div id="veiculos">
+            {% for v in d.veiculos %}
+            <div class="row veiculo_box">
+                <div class="form-group col-sm-6">
+                    <label>Veículo:</label>
+                    <select name="veiculo[]" class="form-control veiculo">
+                        <option value=""></option>
+                        {% for e in veiculos %}
+                        <option value="{{e.id}}" {{ (v.veiculo_id == e.id) ? 'selected' : '' }}>{{e.veiculo}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group col-sm-6 modelo_box">
+                    <label>Modelo:</label>
+                    <select name="modelo[]" class="form-control modelo">
+                        <option value=""></option>
+                        {% for e in modelos %}
+                        <option value="{{e.id}}" {{ (v.modelo_id == e.id) ? 'selected' : '' }}>{{e.modelo}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group col-sm-3">
+                        <label>Motor:</label>
+                        <input type="text" name="motor[]" class="form-control" value="{{ v.motor }}">
+                </div>
+                <div class="form-group col-sm-3">
+                        <label>Ano:</label>
+                        <input type="text" name="ano[]" class="form-control" value="{{ v.ano }}">
+                </div>
+                <div class="form-group col-sm-3">
+                        <label>Combustível:</label>
+                        <input type="text" name="combustivel[]" class="form-control" value="{{ v.combustivel }}">
+                </div>
+                <div class="form-group col-sm-3">
+                    <a class="del btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="row add">
+            <a id="add" class="btn btn-default"><i class="fa fa-plus-circle" aria-hidden="true"></i> Adicionar Veículo</a>
+        </div>
+    
+        <h3>FOTOS</h3>
+        <div class="row"> 
+            <input type="file" id="upload" name="fotos[]" data-fileuploader-files='{{ fotos }}'>
+        </div>            
+
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">ENVIAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+
+</form>
+
+{% endblock %}
+
+{% block js %}
+    <!-- UPLOAD -->
+    <link href="{{ base_url() }}/assets/admin/js/upload/jquery.fileuploader.css" media="all" rel="stylesheet">		
+    <link href="{{ base_url() }}/assets/admin/js/upload/jquery.fileuploader-theme-thumbnails.css" media="all" rel="stylesheet">
+    <script src="{{ base_url() }}/assets/admin/js/upload/jquery.fileuploader.min.js" type="text/javascript"></script>
+    <script src="{{ base_url() }}/assets/admin/js/upload/custom.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#marca').click(function(){
+            url  = '{{ base_url() }}/sac/modelos/ajax/'+$(this).val();
+            $.get(url, function( data ) {
+                $('#modelo').empty().append(data);
+            });
+            
+            });
+        });
+    </script>
+    
+    </script>
+
+    <script>
+        $(document).on("click", ".del" , function() {
+            if(confirm("Tem certeza que deseja remover?")){
+                $(this).parents('.veiculo_box').remove();
+            }
+            else{
+                return false;
+            }
+        });
+
+        $(document).on("change", ".veiculo" , function() {
+            url  = '{{ base_url() }}/sac/produtos/modelos/'+$(this).val();
+            div = $(this).parent().siblings(".modelo_box").children('.modelo');        
+            $.get(url, function( data ) {
+                console.log(data);
+                div.empty().append(data);
+            });
+        });
+
+        $('#add').click(function(){
+            montadora = $("#montadora").val();
+            if(montadora==''){
+                alert('Selecione uma montadora');
+            }else{
+                url = '{{ base_url() }}/sac/produtos/veiculos/'+montadora;
+                $.get(url, function( data ) {
+                    $('#veiculos').append(data);
+                });
+            }        
+        });    
+    </script>
+{% endblock %}

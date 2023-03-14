@@ -1,0 +1,45 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Add - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        </ol>
+    </nav>
+    
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ path_for('app.'~page~'.create' )}}" method="POST" enctype="multipart/form-data" id="validate">
+
+<div class="panel">
+    <div class="panel-body">
+    
+        <div class="row">                   
+            <div class="form-group col-sm-6">
+                <label>ARQUIVO CSV:</label>
+                <input class="form-control" type="file" name="arquivo" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+            </div>
+        </div>        
+
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">ENVIAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+
+</form>
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

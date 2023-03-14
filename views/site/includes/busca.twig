@@ -1,0 +1,51 @@
+<div uk-grid>
+    <div class="uk-width-1-3@m">
+        <div>
+            <p>Pesquisa por código</p>
+            <form method="GET" uk-grid action="{{ path_for('busca' )}}">
+                <div class="uk-margin">
+                    <input name="q" class="uk-input uk-form-width-medium" type="text" placeholder="Código do Produto">
+                    <button class="uk-button uk-button-default" type="submit">PESQUISAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="uk-width-expand@m">
+        <div>
+            <p>Pesquisa avançada</p>
+            <form method="GET" uk-grid action="{{ path_for('busca' )}}">
+                <div class="uk-width-1-5@s">
+                    <select name="montadora"class="uk-select" id="montadoras" sub="veiculos">
+                        <option value="" selected>Montadora</option>
+                        {% for e in configs.montadoras %}
+                        <option value="{{e.id}}">{{e.montadora}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="uk-width-1-5@s">
+                    <select name="veiculo" class="uk-select" id="veiculos" sub="modelos">
+                        <option value="" selected>Veículo</option>
+                        <option value="">Selecione uma montadora ao lado</option> 
+                    </select>
+                </div>
+                 <div class="uk-width-1-5@s">
+                    <select name="modelo" class="uk-select" id="modelos">
+                        <option value="" selected>Modelo</option>
+                        <option value="">Selecione um veículo ao lado</option> 
+                    </select>
+                </div>                
+                <div class="uk-width-1-5@s">
+                    <select name="linha" class="uk-select" id="form-horizontal-select">
+                        <option value="" selected>Linha</option>
+                        {% for e in configs.linhas %}
+                        <option value="{{e.id}}">{{e.linha}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="uk-width-1-5@s">
+                    <button class="uk-button uk-button-default">PESQUISAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

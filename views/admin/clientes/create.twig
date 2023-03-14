@@ -1,0 +1,95 @@
+{% extends 'admin/layouts/base.twig' %}
+{% block title %}{{ title }} > Add - {% endblock %}
+
+{% block content %}
+
+<div id="subheader">
+    <h3 class="page-title">{{ title | upper}}</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path_for('app.home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ path_for('app.'~page) }}">{{ title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Adicionar</li>
+        </ol>
+    </nav>
+    <a href="{{ path_for('app.'~page)}}" class="btn btn-secondary"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+</div>
+
+{% include "components/notifications.twig" %}
+
+<form action="{{ path_for('app.'~page~'.create' )}}" method="POST" enctype="multipart/form-data" id="validate">
+
+<div class="panel">
+    <div class="panel-body">
+    
+        <h3>DADOS</h3>
+        <div class="row">                   
+            <div class="form-group col-sm-6">
+                <label>Nome: </label>
+                <input type="text" name="nome" class="form-control" validate>
+            </div>            
+            <div class="form-group col-sm-6">
+                <label>E-mail:</label>
+                <input type="text" name="email" class="form-control" validate>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Tipo:</label>
+                <select name="tipo" class="form-control tipo" validate>
+                    <option value="PF">Pessoa Física</option>
+                    <option value="PJ">Pessoa Jurídica</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-6 tipo_pf">
+                <label>CPF:</label>
+                <input type="text" name="cpf" class="form-control cpf">
+            </div>
+            <div class="form-group col-sm-6 tipo_pj">
+                <label>CNPJ:</label>
+                <input type="text" name="cnpj" class="form-control cnpj">
+            </div>
+            <div class="form-group col-sm-6 tipo_pj">
+                <label>Código do boleto:</label>
+                <input type="text" name="bopleto_codigo" class="form-control">
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Senha:</label>
+                <input type="text" name="senha" class="form-control" validate>
+            </div>
+            
+        </div>        
+
+    </div>
+
+    <div class="content-buttom">
+        <button class="btn btn-primary btn-lg">ENVIAR <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+        <div id="formErro"></div>
+    </div>
+
+</div>    
+
+</form>
+
+{% endblock %}
+
+{% block js %}
+  <script>
+    $(document).ready(function() {
+        $('.tipo_pj input').attr('disabled','disabled');
+        $('.tipo_pj').hide();
+    });
+
+    $(document).on("change", ".tipo" , function() {
+        if(this.value == 'PF'){
+            $('.tipo_pf input').prop('disabled', false);
+            $('.tipo_pj input').prop('disabled', true);
+            $('.tipo_pf').show();
+            $('.tipo_pj').hide();
+        }else{
+            $('.tipo_pf input').prop('disabled', true);
+            $('.tipo_pj input').prop('disabled', false);
+            $('.tipo_pf').hide();
+            $('.tipo_pj').show();
+        }
+    });
+  </script>
+{% endblock %}

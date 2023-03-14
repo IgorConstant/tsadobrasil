@@ -1,0 +1,42 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Contato - {% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+
+<section id="breadcrumbs">
+    <div class="uk-container">
+        <div class="contentBreadcrumb">
+            <p class="uk-margin-remove">Área do Cliente > Catalogos</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="mainBlock">
+    <div class="contentBlock">
+        <div class="uk-container">  
+            <div class="downloadsCards">
+                <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center" uk-grid>
+                    {% for r in d %}
+                    <div>
+                        <a class="animateCard" href="{{ base_url() }}/assets/uploads/catalogos/{{ r.arquivo }}" target="download">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <i class="far fa-arrow-to-bottom"></i>
+                                <p>{{ r.nome }}</p>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

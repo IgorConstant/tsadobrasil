@@ -1,0 +1,53 @@
+
+
+.main-content{ max-width: 1400px; margin: 0 auto; padding: 30px 30px 60px 30px;}
+
+.panel-body h3{ font-size: 22px;}
+
+.panel-body .form-group { margin-bottom: 10px;}
+.content-buttom{ text-align: right; padding:20px; background-color: #f7f7f9; margin: 0 0 40px 0; }
+
+#subheader { margin-bottom: 25px; position: relative; }
+#subheader h3 { margin-bottom: 5px; }
+#subheader .breadcrumb { padding: 0; margin-bottom: 5px; }
+#subheader a.btn { position: absolute; right: 0px; top: 0; }
+
+
+.navbar-default {
+    -webkit-transition: none;
+    transition: none;
+    -moz-box-shadow: none;
+    -webkit-border-radius: none;
+    box-shadow: none;
+
+}
+
+.panel .table > thead > tr > td:first-child, .panel .table > thead > tr > th:first-child, .panel .table > tbody > tr > td:first-child, .panel .table > tbody > tr > th:first-child, .panel .table > tfoot > tr > td:first-child, .panel .table > tfoot > tr > th:first-child {
+    padding-left: 10px;
+}
+
+.table .btn-small{ padding:5px 10px;}
+
+.navbar-default .brand { padding: 5px 5px; }
+
+.panel-body .form-group { margin-bottom: 0px;  min-height: 82px;}
+span.helper{ font-size: 12px; color: red;  font-style: italic; font-weight: normal; margin-left: 10px;}
+.helperShow{ border: 2px dotted #981029;}
+
+#formErro{ font-size: 14px; color: red;  font-style: italic; }
+
+label {margin-bottom: 3px; }
+
+.space-b{ margin-bottom: 30px !important;}
+
+
+.sidebar .nav > li > a {
+    padding: 8px 30px;
+}
+
+.btn-micro{padding: 0 10px !important;  margin: 0 5px !important;  border: 0 !important;}
+
+.add{ text-align: center;}
+.del{ margin-top: 22px; }
+
+.veiculos{ padding:10px 5px; margin: 20px 0;  }

@@ -1,0 +1,70 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+<section class="articles">
+  <div class="column is-8 is-offset-2">
+    <div class="card article">
+      <div class="card-content">
+      {{ erros | json_encode }}
+        <form method="POST" action="">
+          
+          <div class="field">
+            <label class="label">Nome Completo</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-medium {{ errors.name ? 'is-danger' : '' }}" name="name" type="text" placeholder="Ex: João Santos">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+              {% if errors.name %}
+                <p class="help is-danger">{{ errors.name | first }}</p>
+              {% endif %}
+            </div>
+
+          </div>
+
+          <div class="field">
+            <label class="label">E-mail</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-medium {{ errors.email ? 'is-danger' : '' }}" name="email" type="email" placeholder="marcuspereira@example.com">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            {% if errors.email %}
+              <p class="help is-danger">{{ errors.email | first }}</p>
+            {% endif %}
+          </div>
+          
+          <div class="field">
+            <label class="label">Senha</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-medium {{ errors.password ? 'is-danger' : '' }}" name="password" type="password" placeholder="*****">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            {% if errors.password %}
+              <p class="help is-danger">{{ errors.password | first }}</p>
+            {% endif %}
+          </div>
+          
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-medium is-link">Cadastrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

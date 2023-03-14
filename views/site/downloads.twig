@@ -1,0 +1,128 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Downloads
+{% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+
+	<section id="introBlock">
+		<div class="uk-container">
+			<div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove">Downloads</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove float-right">TSA
+							<span style="color: #ffcb05;">\\</span>
+							te leva mais longe</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="mainBlock">
+		<div class="contentBlock">
+			<div class="uk-container">
+				<div class="contentText">
+					<div uk-grid>
+						<div class="uk-width-1-3@m">
+							<div>
+								<div class="requestForm">
+									<h5 class="uk-text-uppercase">Preencha o formulário e realize sua solicitação</h5>
+									<form action="{{ path_for('downloads_send' )}}" method="POST">
+										<div class="uk-margin">
+											<input class="uk-input" type="text" name="nome" placeholder="Nome Completo" required>
+										</div>
+										<div class="uk-margin">
+											<input class="uk-input" type="email" name="email" placeholder="E-mail" required>
+										</div>
+										<div class="uk-margin">
+											<input class="uk-input telCliente" type="tel" name="telefone" placeholder="Telefone" required>
+										</div>
+										<div class="uk-margin">
+											<select name="tipo" class="uk-select" required>
+												<option>Selecione uma opção</option>
+												<option value="Catalogo Impresso">Catalogo Impresso</option>
+												<option value="Banco de Imagem">Banco de Imagem</option>
+											</select>
+										</div>
+										<div class="uk-margin">
+											<button class="uk-button uk-button-default uk-width-1-1" type="submit">Enviar Solicitação</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="uk-width-expand@m">
+							<img class="uk-margin-bottom" src="{{base_url()}}/assets/site/images/banner-download-app.jpg" alt="Banner Downloads TSA">
+							<div class="grayBox uk-card uk-card-default uk-card-body">
+								<div class="content">
+									<h4 class="uk-margin-remove">Aplicativo TSA</h4>
+									<p class="uk-margin-remove">Tenha acesso rápido a qualquer momento na palma da mão</p>
+									<ul>
+										<li>
+											<a href="https://play.google.com/store/apps/details?id=br.com.ideia2001.CatalogoTSA&hl=pt_BR&gl=US" target="_blank">
+												<img src="{{base_url()}}/assets/site/images/btn-google-play.png" alt="Google Play"></a>
+										</li>
+									</li>
+									<li>
+										<a href="https://itunes.apple.com/br/app/tsa-app/id1459098981?mt=8" target="_blank">
+											<img src="{{base_url()}}/assets/site/images/btn-apple.png" alt="App Store"></a>
+									</li>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/br-pt/store/apps/tsa-app/9nblgghj3jfq" target="_blank">
+										<img src="{{base_url()}}/assets/site/images/btn-desktop.png" alt="Desktop"></a>
+								</li>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{#
+																		            <div class="downloadsCards">
+																		                <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center" uk-grid>
+																		                    <div>
+																		                        <a class="animateCard" href="#" target="_blank">
+																		                            <div class="uk-card uk-card-default uk-card-body">
+																		                                <i class="far fa-arrow-to-bottom"></i>
+																		                                <p>CATÁLOGO <br> PDF</p>
+																		                            </div>
+																		                        </a>
+																		                    </div>
+																		                    <div>
+																		                        <a class="animateCard" href="#" target="_blank">
+																		                            <div class="uk-card uk-card-default uk-card-body">
+																		                                <i class="far fa-arrow-to-bottom"></i>
+																		                                <p>CATÁLOGO <br> SENSOR ABS</p>
+																		                            </div>
+																		                        </a>
+																		                    </div>
+																		                    <div>
+																		                        <a class="animateCard" href="#" target="_blank">
+																		                            <div class="uk-card uk-card-default uk-card-body">
+																		                                <i class="far fa-arrow-to-bottom"></i>
+																		                                <p>CATÁLOGO <br> ELETROBOMBAS</p>
+																		                            </div>
+																		                        </a>
+																		                    </div>
+																		                    <div>
+																		                        <a class="animateCard" href="#" target="_blank">
+																		                            <div class="uk-card uk-card-default uk-card-body">
+																		                                <i class="far fa-arrow-to-bottom"></i>
+																		                                <p>CATÁLOGO <br> LINHA PESADA</p>
+																		                            </div>
+																		                        </a>
+																		                    </div>
+																		                </div>
+																		            </div>
+																		            #}
+
+</div></div></section>{% endblock %}{% block js %}{% endblock %}

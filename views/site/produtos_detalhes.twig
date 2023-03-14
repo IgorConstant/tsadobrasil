@@ -1,0 +1,188 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}{{ d.codigo_tsa }} - {{ d.montadora.montadora }} - {{ d.linha.linha }} - Produtos Detalhes - {% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+
+	<section id="breadcrumbs">
+		<div class="uk-container">
+			<div class="contentBreadcrumb">
+				<p class="uk-margin-remove">Produtos</p>
+			</div>
+		</div>
+	</section>
+
+	<div class="searchForm">
+        {% include 'site/includes/busca.twig' %}
+    </div>
+
+	<section id="mainBlock">
+		<div class="contentBlock">
+			<div class="uk-container">
+				{# <div class="indicatorProduct">
+					<p class="uk-margin-remove">{{ d.linha.linha }}</p>
+				</div> #}
+
+				<div class="contentProduct">
+					<div uk-grid>
+						<div class="uk-width-1-3@m uk-flex uk-flex-middle">
+							<div>
+								<div class="infosProduct">
+									<p class="productCode">Código TSA:
+										<span>{{ d.codigo_tsa }}</span>
+									</p>
+									<span>Montadora</span>
+									<p class="nameAutomaker">{{ d.montadora.montadora }}</p>
+									{% if codigos|length > 0 %}
+										<span>Código Original</span>
+										<p class="originalCode">
+											{% for c in codigos %}
+												<mark>{{ c }}</mark>
+											{% endfor %}
+										</p>
+									{% endif %}
+									{% if codigos_outros|length > 0 %}
+										<span>Outros Códigos</span>
+										<p class="originalCode">
+											{% for c in codigos_outros %}
+												<mark>{{ c }}</mark>
+											{% endfor %}
+										</p>
+									{% endif %}
+									{% if d.compativel %}
+										<span>Compatível</span>
+										<p class="compatible">
+											<mark>{{ d.compativel }}</mark>
+										</p>
+									{% endif %}
+
+									{% if valores|length > 0 %}
+										<span>Valor Ohmico</span>
+										<ul>
+											{% for v in valores %}
+												{% if v.tipo == 'vazio' %}
+													<li><img src="{{base_url()}}/assets/site/images/icon1.png" alt="Icone">
+														{{ v.valor }}
+													</li>
+												{% endif %}
+												{% if v.tipo == 'meio' %}
+													<li><img src="{{base_url()}}/assets/site/images/icon2.png" alt="Icone">
+														{{ v.valor }}
+													</li>
+												{% endif %}
+												{% if v.tipo == 'cheio' %}
+													<li><img src="{{base_url()}}/assets/site/images/icon3.png" alt="Icone">
+														{{ v.valor }}
+													</li>
+												{% endif %}
+											{% endfor %}
+										</ul>
+									{% endif %}
+
+									{% if d.observacoes %}
+										<span>Observações</span>
+										<p class="compatible">
+											<mark>{{ d.observacoes|nl2br }}</mark>
+										</p>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						<div class="uk-width-3-5@m">
+							<div>
+								<div class="productSlider">
+									<div id="bigImage" class="owl-carousel owl-theme">
+										{% for r in d.fotos %}
+											<div class="item"><img class="uk-width-1-1" src="{{base_url()}}/assets/uploads/produtos/{{ r.imagem }}" alt="Imagem Full"></div>
+										{% endfor %}
+									</div>
+									<div id="thumbImage" class="owl-carousel owl-theme">
+										{% for r in d.fotos %}
+											<div class="item"><img class="uk-width-1-1" src="{{ base_url() }}/thumb.php?img=assets/uploads/produtos/{{ r.imagem }}&w=400&h=235" alt="Imagem Full"></div>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="applicationTable uk-overflow-auto">
+						<p class="uk-text-center uk-margin-remove">Tabela de Aplicações</p>
+
+						<table class="uk-table uk-text-center">
+							<thead>
+								<tr>
+									<th>Veículo</th>
+									<th>Modelo</th>
+									<th>Motor</th>
+									<th>Ano</th>
+									<th>Combustível</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for v in d.veiculos %}
+									<tr>
+										<td>{{ v.veiculo.veiculo ? v.veiculo.veiculo : '-' }}</td>
+										<td>{{ v.modelo.modelo ? v.modelo.modelo : '-' }}</td>
+										<td>{{ v.motor ? v.motor : '-' }}</td>
+										<td>{{ v.ano ? v.ano : '-' }}</td>
+										<td>{{ v.combustivel ? v.combustivel : '-' }}</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+
+						<hr/>
+
+						{% if d.arquivo_manual or d.arquivo_lamina %}
+							<div class="mediaDownload">
+								<ul>
+									<li>Downloads</li>
+									{% if d.arquivo_manual %}
+										<li>
+											<a class="uk-button uk-button-default" href="{{ base_url() }}/assets/uploads/produtos/catalogos/{{ d.arquivo_manual }}" target="_blank">Manual de Montagem</a>
+										</li>
+									{% endif %}
+									{% if d.arquivo_lamina %}
+										<li>
+											<a class="uk-button uk-button-default" href="{{ base_url() }}/assets/uploads/produtos/catalogos/{{ d.arquivo_lamina }}" target="_blank">Lâmina</a>
+										</li>
+									{% endif %}
+								</ul>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% if relacionados|length > 0 %}
+		<section id="relatedProduct">
+			<div class="uk-container">
+				<div class="productContent">
+					<p class="uk-margin-remove">Produtos Relacionados</p>
+					<hr/>
+					<div class="uk-margin-top">
+						<div class="owl-carousel owl-theme" id="productsCat2">
+							{% for r in relacionados %}
+								<div class="item">
+									<div class="uk-card uk-card-default uk-card-body">
+										<p class="uk-margin-remove codProduct">{{ r.codigo_tsa }}</p>
+										<p class="uk-margin-remove nameProduct">{{ r.linha.linha }}</p>
+										<span class="model">{{ r.montadora.montadora }}</span>
+										<img class="uk-margin-top uk-margin-bottom" src="{{base_url()}}/assets/site/images/T-130091.png" alt="Example">
+										<a class="uk-button uk-button-default uk-align-right" href="{{ path_for('produtos_detalhes', {'montadora': r.montadora.montadora_url,'codigo': r.codigo_tsa_url,'id': r.id} )}}">Conheça</a>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endif %}
+
+{% endblock %}
+
+{% block js %}{% endblock %}

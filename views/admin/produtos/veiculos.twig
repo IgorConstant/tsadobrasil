@@ -1,0 +1,32 @@
+<div class="row veiculo_box">
+    <div class="form-group col-sm-6">
+        <label>Veículo:</label>
+        <select name="veiculo[]" class="form-control veiculo">
+            <option value=""></option>
+            {% for v in d %}
+            <option value="{{v.id}}">{{v.veiculo}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group col-sm-6 modelo_box">
+        <label>Modelo:</label>
+        <select name="modelo[]" class="form-control modelo">
+            <option value="">selecione um veículo ao lado</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-3">
+            <label>Motor:</label>
+            <input type="text" name="motor[]" class="form-control">
+    </div>
+    <div class="form-group col-sm-3">
+            <label>Ano:</label>
+            <input type="text" name="ano[]" class="form-control">
+    </div>
+    <div class="form-group col-sm-3">
+            <label>Combustível:</label>
+            <input type="text" name="combustivel[]" class="form-control">
+    </div>
+    <div class="form-group col-sm-3">
+        <a class="del btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></a>
+    </div>
+</div>

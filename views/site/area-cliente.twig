@@ -1,0 +1,80 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Área do Cliente
+{% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+
+	<section id="introBlock">
+		<div class="uk-container">
+			<div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove">Área do Cliente</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove float-right">TSA
+							<span style="color: #ffcb05;">\\</span>
+							te leva mais longe</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="mainBlock">
+		<div class="contentBlock">
+			<div class="uk-container">
+
+				<div class="downloadsCards">
+					<div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center" uk-grid>
+						<div>
+							<a class="animateCard" href="{{ path_for('areacliente_catalogos' )}}">
+								<div class="uk-card uk-card-default uk-card-body">
+									<i class="fas fa-file-alt"></i>
+									<p>CATÁLOGOS</p>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a class="animateCard" href="{{ path_for('areacliente_folders' )}}">
+								<div class="uk-card uk-card-default uk-card-body">
+									<i class="fas fa-file-download"></i>
+									<p>FOLDERS</p>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a class="animateCard" href="{{ path_for('areacliente_videos' )}}">
+								<div class="uk-card uk-card-default uk-card-body">
+									<i class="fab fa-youtube"></i>
+									<p>VÍDEO</p>
+								</div>
+							</a>
+						</div>
+						{% if c.tipo=='PJ' and c.boleto_codigo!='' %}
+							<div>
+								<a class="animateCard" href="https://www63.bb.com.br/portalbb/boleto/boletos/hc21e,802,3322,10343,2,0,1.bbx?lnDigtvl={{ c.boleto_codigo }}&cpfCnpjPagador={{ c.cnpj }}&cpfCnpjbeneficiario=05745983000109" target="_banco">
+									<div class="uk-card uk-card-default uk-card-body">
+										<i class="fas fa-file-invoice-dollar"></i>
+										<p>BOLETO</p>
+									</div>
+								</a>
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}
+
+{% block js %}{% endblock %}

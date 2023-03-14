@@ -1,0 +1,65 @@
+{% extends 'site/layouts/base.twig' %}
+{% block title %}Produtos
+{% endblock %}
+{% block description %}{% endblock %}
+
+{% block content %}
+
+	<section id="introBlock">
+		<div class="uk-container">
+			<div class="uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove">Produtos</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p class="uk-text-uppercase uk-margin-remove float-right">TSA
+							<span style="color: #ffcb05;">\\</span>
+							te leva mais longe</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="mainBlock">
+		<div class="uk-container">
+			<div class="searchForm">
+				{% include 'site/includes/busca.twig' %}
+			</div>
+
+			<div class="productsList">
+				{% for l in configs.linhas %}
+					<div class="title">
+						<h4>{{ l.linha }}</h4>
+					</div>
+					<div class="uk-margin-top">
+						<div class="owl-carousel owl-theme productsSlider">
+							{% for r in l.produtos %}
+								<div class="item">
+									<div class="uk-card uk-card-default uk-card-body">
+										<p class="uk-margin-remove codProduct">{{r.codigo_tsa}}</p>
+										<p class="uk-margin-remove nameProduct">{{r.linha.linha}}</p>
+										<span class="model">{{r.montadora.montadora}}</span>
+										<img class="uk-margin-top uk-margin-bottom" src="{{ base_url() }}/thumb.php?img=assets/uploads/produtos/{{ r.fotos[0].imagem }}&w=200&h=200">
+										<a class="uk-button uk-button-default uk-align-right" href="{{ path_for('produtos_detalhes', {'montadora': r.montadora.montadora_url,'codigo': r.codigo_tsa_url,'id': r.id} )}}">Conheça</a>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="uk-text-center uk-margin-top">
+						<a class="uk-button uk-button-default lineButton" href="{{ path_for('produtos_linhas', {'id': l.linha_url} )}}">Ver linha completa</a>
+					</div>
+					<hr>
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
+
+{% block js %}{% endblock %}
