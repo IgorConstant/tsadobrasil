@@ -14,17 +14,17 @@ if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){
     $db_name = 'db_tsafinal';
     $db_user = 'root';
     $db_pass = '';
-    $app_email  = "mauricio@mbiasotto.com";
+    $app_email  = "";
 }else{
     // $db_host = 'localhost';
-    // $db_name = 'mbiasott_tsa';
-    // $db_user = 'mbiasott_tsa';
-    // $db_pass = 'iwkSEWM0O';
+    // $db_name = '';
+    // $db_user = '';
+    // $db_pass = '';
 
     $db_host = 'localhost';
-    $db_name = 'agen4830_tsa';
-    $db_user = 'agen4830_igor';
-    $db_pass = 'Hdes75995715';
+    $db_name = '';
+    $db_user = '';
+    $db_pass = '';
 
     $app_email  = "igor@agenciaduetto.com.br";
 }
