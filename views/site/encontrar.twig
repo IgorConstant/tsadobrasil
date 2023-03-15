@@ -32,7 +32,7 @@
 					<div uk-grid>
 						<div class="uk-width-1-3@m">
 							<div>
-								<p>Busca por Região</p>
+								<p>Busca por Estado</p>
 								<div uk-grid>
 									<div class="uk-margin">
 										<select class="uk-select uk-form-width-medium estado" id="form-stacked-select" name="estado">
@@ -90,7 +90,7 @@
 
 
 				{% if d|length == 0 %}
-					<div class="infoCustomer">
+					<div class="infoCustomer uk-margin-top">
 						<div class="uk-grid-collapse" uk-grid>
 							<h2>Revenda não encontrada para esse estado!</h2>
 						</div>
@@ -99,7 +99,7 @@
 				{% else %}
 
 					{% for r in d %}
-						<div class="infoCustomer">
+						<div class="infoCustomer uk-margin-bottom">
 							<div class="uk-grid-collapse" uk-grid>
 								<div class="uk-width-1-3@m">
 									<div class="uk-card uk-card-default uk-card-body">
@@ -117,7 +117,7 @@
 											{{ r.email}}</p>
 										<p>Endereço:
 											{{ r.endereco }},
-											{{ r.numero }}, térreo
+											{{ r.numero }}
 											<br>
 											{{ r.bairro }}
 											-
