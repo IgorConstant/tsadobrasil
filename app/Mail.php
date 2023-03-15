@@ -25,8 +25,8 @@ class Mail
             $mail->Port = 587;
             $mail->SMTPSecure = 'tls';
             $mail->SMTPAuth = true; // Usa autentica��o SMTP? (opcional)
-            $mail->Username = 'webmaster.duettoag@gmail.com'; // Usu�rio do servidor SMTP
-            $mail->Password = 'dgtguqihenyccztt'; // Senha do servidor SMTP
+            $mail->Username = ''; // Usu�rio do servidor SMTP
+            $mail->Password = ''; // Senha do servidor SMTP
             $mail->SMTPDebug = 0;
             
             // Define o remetente
