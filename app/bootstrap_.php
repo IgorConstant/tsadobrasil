@@ -26,7 +26,7 @@ if ((strrpos(strtolower($_SERVER['SERVER_NAME']), "localhost") !== false)){
     $db_user = '';
     $db_pass = '';
 
-    $app_email  = "mauricio@mbiasotto.com";
+    $app_email  = "";
 }
 
 $app = new Slim\App([
