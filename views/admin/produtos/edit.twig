@@ -84,7 +84,7 @@
 
         <h3>MATERIAIS</h3>
         <div class="row">     
-            <div class="form-group col-sm-6">
+            <div class="form-group col-sm-4">
                 <label>Manual: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Arquivo: PDF"></i> 
                     {% if d.arquivo_manual != '' %}
                     <a class="btn btn-micro" alt="View" title="View" target="new" href="{{ base_url() }}/assets/uploads/produtos/catalogos/{{ d.arquivo_manual }}"><i class="fa fa-eye"></i></a>
@@ -93,7 +93,7 @@
                 </label>
                 <input class="form-control" type="file" name="arquivo"  accept="application/pdf">
             </div>
-            <div class="form-group col-sm-6">
+            <div class="form-group col-sm-4">
                 <label>Lamina: <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Arquivo: PDF"></i> 
                     {% if d.arquivo_lamina != '' %}
                     <a class="btn btn-micro" alt="View" title="View" target="new" href="{{ base_url() }}/assets/uploads/produtos/catalogos/{{ d.arquivo_lamina }}"><i class="fa fa-eye"></i></a>
@@ -101,6 +101,10 @@
                     {% endif %}
                 </label>
                 <input class="form-control" type="file" name="arquivo_lamina"  accept="application/pdf">
+            </div>
+            <div class="form-group col-sm-4">
+                <label>Vídeo</label>
+                <input class="form-control" type="text" name="id_video" value={{ d.video }}>
             </div>
         </div>
 
