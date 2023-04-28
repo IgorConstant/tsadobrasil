@@ -109,6 +109,7 @@ class ProdutoController extends Controller
             'relacionados' => $request->getParam('relacionados'),
             'destaque' => $request->getParam('destaque'),
             'status' => $request->getParam('status'),
+            'video' => $request->getParam('id_video'),
             'arquivo_manual' => $arquivo_name,
             'arquivo_lamina' => $arquivo_lamina_name,
             'keywords' => Helper::keywords($request->getParam('codigo_tsa') . ' ' . $request->getParam('codigo_original') . ' ' . $request->getParam('codigo_outros') . ' ' . $request->getParam('codigo_oculto') . ' ' . $request->getParam('compativel') . ' ' . $request->getParam('relacionados')),
@@ -245,6 +246,7 @@ class ProdutoController extends Controller
         $item->valor_ohmico = $request->getParam('valor_ohmico');
         $item->observacoes = $request->getParam('observacoes');
         $item->relacionados = $request->getParam('relacionados');
+        $item->video = $request->getParam('id_video');
         $item->destaque = $request->getParam('destaque');
         $item->status = $request->getParam('status');
         $item->keywords = Helper::keywords($request->getParam('codigo_tsa') . ' ' . $request->getParam('codigo_original') . ' ' . $request->getParam('codigo_outros') . ' ' . $request->getParam('codigo_oculto') . ' ' . $request->getParam('compativel') . ' ' . $request->getParam('relacionados'));
