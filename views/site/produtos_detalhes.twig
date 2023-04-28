@@ -1,5 +1,12 @@
 {% extends 'site/layouts/base.twig' %}
-{% block title %}{{ d.codigo_tsa }} - {{ d.montadora.montadora }} - {{ d.linha.linha }} - Produtos Detalhes - {% endblock %}
+{% block title %}
+	{{ d.codigo_tsa }}
+	-
+	{{ d.montadora.montadora }}
+	-
+	{{ d.linha.linha }}
+	- Produtos Detalhes -
+{% endblock %}
 {% block description %}{% endblock %}
 
 {% block content %}
@@ -13,15 +20,16 @@
 	</section>
 
 	<div class="searchForm">
-        {% include 'site/includes/busca.twig' %}
-    </div>
+		{% include 'site/includes/busca.twig' %}
+	</div>
 
 	<section id="mainBlock">
 		<div class="contentBlock">
-			<div class="uk-container">
+			<div
+				class="uk-container">
 				{# <div class="indicatorProduct">
-					<p class="uk-margin-remove">{{ d.linha.linha }}</p>
-				</div> #}
+									<p class="uk-margin-remove">{{ d.linha.linha }}</p>
+								</div> #}
 
 				<div class="contentProduct">
 					<div uk-grid>
@@ -104,6 +112,17 @@
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div class="moreInfos uk-margin-large-top">
+						<ul uk-accordion>
+							<li>
+								<a style="font-size:20px;" class="uk-accordion-title" href="#">VÍDEO</a>
+								<div class="uk-accordion-content">
+									<iframe width="100%" height="500px" src="https://www.youtube.com/embed/{{ d.video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</li>
+						</ul>
 					</div>
 
 					<div class="applicationTable uk-overflow-auto">
